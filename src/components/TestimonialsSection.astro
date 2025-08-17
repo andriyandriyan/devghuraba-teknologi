@@ -1,0 +1,196 @@
+---
+interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: 'Rizal Afrizal',
+    role: 'Pengguna Warsya',
+    content: 'Aplikasi bengkel sangat recommended , sangat ngebantu banget untuk pengusaha bengkel ...trimaksih ...',
+  },
+  {
+    name: 'juni nio',
+    role: 'Pengguna Warsya',
+    content: 'Keren👍 akhirnya ketemu aplikasi toko bengkel yg bagus. Sangat membantu dalam transaksi dan laporan keuangan bengkel. Aplikasi nya lengkap sangat cocok untuk kebutuhan bengkel saya. Sdh coba instal bnyak aplikasi android, dr semua yg dicoba, Warsya yg paling lengkap dan tepat.. akhirnya apk yg lain hapus, gk bakal dilirik lagi 😅 pokoknya sangat recommended 👍 maju terus buat pengembangnya 😇🙏🏻',
+  },
+  {
+    name: 'SRI WAHYUNI',
+    role: 'Pengguna Warsya',
+    content: 'Mantap aplikasinya , walaupun pake yg gratis sangat terbantu sekali. Krn aplikasi untuk bengkel agak rumit biasanya.',
+  },
+  {
+    name: 'Ngaji Qolbu',
+    role: 'Pengguna Warsya',
+    content: 'mantap nih apk... semoga lancar jala dan berkah selalu..amin',
+  },
+  {
+    name: 'Trias Nardian',
+    role: 'Pengguna Warsya',
+    content: 'aplikasi yg menolong sy ngelilola bengkel sy.. tampilan sederhana.. admin nya jg responsif ngebantu.. makasih min',
+  },
+  {
+    name: 'M Rizky Supriyanto',
+    role: 'Pengguna Randori',
+    content: 'apk bagus lengkap, tanpa lemot tanpa muter-muter🤩 tdk seperti apk sebelah',
+  },
+  {
+    name: 'aksin muslim',
+    role: 'Pengguna Randori',
+    content: 'aplikasi ini sangat mudah di fahami untuk yg awam seperti saya',
+  },
+  {
+    name: 'UmmuNaflah Story',
+    role: 'Pengguna Randori',
+    content: 'suka dengan aplikasi ini sngt bagus dan bermanfaat',
+  },
+  {
+    name: 'Dewi Afrianisyah',
+    role: 'Pengguna Randori',
+    content: 'keren aplikasinya lengkap rekomen banget',
+  },
+  {
+    name: 'Lafayete Laundry',
+    role: 'Pengguna Randori',
+    content: 'aplikasinya keren, developer aplikasinya mendengarkan masukan dari penggunaannya',
+  },
+  {
+    name: 'AE PHONE',
+    role: 'Pengguna Reparación',
+    content: 'Versi uji coba mumpuni sekali, apalagi versi pro nya. Terima kasih buat developer, semoga sehat dan rejeki selalu lancar',
+  },
+  {
+    name: 'Tris Wantoro',
+    role: 'Pengguna Reparación',
+    content: 'Cukup sempurna & inovativ..sangat membantu me-manage administrasi & monitoring progres service',
+  },
+  {
+    name: 'Hachi Service Center',
+    role: 'Pengguna Reparación',
+    content: 'Walaupun uji coba, tapi kualitasnya maximal. Sangat membantu umkm dan mengurangi polusi kertas',
+  },
+  {
+    name: 'Tobing Cell Tente',
+    role: 'Pengguna Reparación',
+    content: 'APLIKASI SUPER MANTAP... memudahkan konter service hp... untuk pembuat aplikasi devoloper tetap semangat, pertahankan dan kembangkan karena sampai detik ini belum ada aplikasi sebagus dan semudah ini menggunakannya... SALAM WAWAN PONSEL',
+  },
+  {
+    name: 'Imam Majiid',
+    role: 'Pengguna Reparación',
+    content: 'Aplikasi yang fiturnya luarbiasa komplit bisa mengakomodir kebutuhan pelayanan jasa servis dan penjualan produk beserta seluruh laporan²nya yang biayanya langganannya sangat terjangkau untuk pelaku usaha kecil seperti saya. Salam sukses dari Sahabat Laptop yogyakarta',
+  },
+  {
+    name: 'Raza shop',
+    role: 'Pengguna Thoqo',
+    content: 'Masya Allah bagus banget simpel, terimakasih sudah mempermudah UMKM, semoga kedepannya bisa daftar langganan biar bisa pakai fitur yang lebih lengkap, tapi yg gratisan nya pun udh oke banget ka, terimakasih banyak, the best banget pokoknya, recommended saran aja ka tolong di adakan fitur varian di setiap produk nya🙏🏻',
+  },
+  {
+    name: 'ayah Adi',
+    role: 'Pengguna Thoqo',
+    content: 'bagus...murah....mudah....terima kasih yaah',
+  },
+  {
+    name: 'Radiva Budi',
+    role: 'Pengguna Thoqo',
+    content: 'lengkap mudah digunakan',
+  },
+  {
+    name: 'wilda widyastuti',
+    role: 'Pengguna Thoqo',
+    content: 'bagus mudah lengkap',
+  },
+  {
+    name: 'Fong Venus',
+    role: 'Pengguna Thoqo',
+    content: 'mudah di pahami,sangat membantu',
+  },
+  {
+    name: 'Asus max M2',
+    role: 'Pengguna Bistro',
+    content: 'Alhamdulillah, sangat membantu saya dalam mencatat penjualan, ga ribet dan mudah di mengerti. Jadi jangan ragu pakai aplikasi ini',
+  },
+  {
+    name: 'leo seagel',
+    role: 'Pengguna Bistro',
+    content: 'aplikasi ini simple,jadi saya mengajarkan ke pegawai saya sangat mudah,saya sudah berlangganan and so far so good,semoga kedepannya lebih baik lagi,thanx',
+  },
+  {
+    name: 'Aguswanto Tahang',
+    role: 'Pengguna Bistro',
+    content: 'aplikasi bagus, mudah digunakan dan berlangganannya juga ramah di kantong',
+  },
+  {
+    name: 'Heri Yulianto',
+    role: 'Pengguna Bistro',
+    content: 'aplikasi yang sangat simpel dan mudah di pahami. terima kasih semoga semakin maju dan berkembang',
+  },
+];
+---
+<section id="testimoni" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Apa Kata <span class="text-primary">Pelanggan Kami?</span>
+      </h2>
+      <p class="text-lg text-gray-500">
+        Ribuan bisnis telah merasakan manfaat transformasi digital bersama Devghuraba Teknologi.
+        Berikut testimoni mereka yang telah berkembang pesat.
+      </p>
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"> -->
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-8 [column-fill:_balance] mb-16">
+      {testimonials.map(testimonial => (
+        <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-lg break-inside-avoid mb-8">
+          <div class="p-6">
+            <p class="text-gray-500 italic mb-6 leading-relaxed">
+              "{testimonial.content}"
+            </p>
+            <div class="flex items-center gap-3">
+              <span class="h-12 w-12 flex shrink-0 overflow-hidden">
+                <span class="flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-300 text-white font-semibold w-full">
+                  {testimonial.name.split(' ').slice(0, 2).map(name => name[0]).join('').toUpperCase()}
+                </span>
+              </span>
+              <div>
+                <h4 class="font-semibold">{testimonial.name}</h4>
+                <p class="text-sm text-gray-500">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Trust Indicators */}
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-r from-primary/5 to-primary-400/5 border-primary/20 shadow-sm rounded-lg border">
+        <div class="p-8 text-center">
+          <h3 class="text-2xl font-bold mb-6">
+            Dipercaya oleh Ribuan Bisnis
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="text-3xl font-bold text-primary mb-2">4.7/5</div>
+              <div class="text-sm text-gray-500">Rating Kepuasan</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary mb-2">1000+</div>
+              <div class="text-sm text-gray-500">Pengguna Aktif</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary mb-2">450+</div>
+              <div class="text-sm text-gray-500">Kota Terlayani</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary mb-2">2+</div>
+              <div class="text-sm text-gray-500">Tahun Pengalaman</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

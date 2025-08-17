@@ -1,0 +1,110 @@
+---
+import { Icon } from 'astro-icon/components';
+import logo from '~/images/devghuraba-hor.webp';
+
+const navigationItems = [
+  { id: 'tentang', label: 'Tentang' },
+  { id: 'produk', label: 'Produk' },
+  { id: 'keunggulan', label: 'Keunggulan' },
+  { id: 'testimoni', label: 'Testimoni' },
+  { id: 'kontak', label: 'Kontak' }
+];
+---
+
+<header
+  class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-b-gray-100 z-50"
+>
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <img src={logo.src} alt="Logo Devghuraba Teknologi" height="36" width="288" />
+
+      <nav class="hidden lg:flex items-center space-x-8">
+        {navigationItems.map(item => (
+          <button
+            class="text-gray-500 hover:text-primary transition-colors nav-button"
+            data-section={item.id}
+          >
+            {item.label}
+          </button>
+        ))}
+      </nav>
+
+      <a
+        href="https://wa.me/6289699250746"
+        target="_blank"
+        class="hidden lg:block bg-primary text-white rounded text-sm font-medium px-4 py-2 hover:bg-primary-700"
+      >
+        <span>Hubungi Kami</span>
+      </a>
+
+      <div class="lg:hidden flex items-center space-x-4">
+        <a
+          href="https://wa.me/6289699250746"
+          target="_blank"
+          class="bg-primary text-white rounded text-sm font-medium px-4 py-2 hover:bg-primary-700 flex items-center gap-2"
+          aria-label="Hubungi Kami"
+        >
+          <Icon name="tabler:message" class="w-4 h-4" />
+          <span class="hidden sm:inline">Hubungi Kami</span>
+        </a>
+        <button
+          id="mobile-menu-button"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300"
+          aria-label="Menu"
+        >
+          <Icon name="tabler:menu" class="w-6 h-6 menu" />
+          <Icon name="tabler:x" class="w-6 h-6 close hidden" />
+        </button>
+      </div>
+
+    </div>
+
+    <div class="lg:hidden mt-4 pb-4 border-t border-primary-600 hidden" id="mobile-nav">
+      <nav class="flex flex-col space-y-2 mt-4">
+        {navigationItems.map(item => (
+          <button
+            class="text-left text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-4 py-2 rounded-lg font-medium transition-all duration-300 nav-button"
+            data-section={item.id}
+          >
+            {item.label}
+          </button>
+        ))}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function mobileNavAction() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const menuIcon = mobileMenuButton?.querySelector('.menu');
+      const closeIcon = mobileMenuButton?.querySelector('.close');
+      const mobileNav = document.getElementById('mobile-nav');
+      if (menuIcon?.classList.contains('hidden')) {
+        menuIcon.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+        mobileNav?.classList.add('hidden');
+      } else {
+        menuIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+        mobileNav?.classList.remove('hidden');
+      }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const navButtons = document.querySelectorAll('.nav-button');
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const sectionName = button.getAttribute('data-section') || '';
+        const section = document.getElementById(sectionName);
+        section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mobileNavAction();
+      });
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    mobileMenuButton?.addEventListener('click', function () {
+      mobileNavAction();
+    });
+  });
+</script>

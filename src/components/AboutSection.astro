@@ -1,0 +1,70 @@
+---
+import Card from './Card.astro';
+
+const cardInfo = [
+  {
+    icon: 'target',
+    title: 'Misi Kami',
+    body: 'Membantu setiap bisnis meraih potensi maksimalnya melalui teknologi yang tepat guna.',
+  },
+  {
+    icon: 'eye',
+    title: 'Visi Kami',
+    body: 'Menjadi penyedia solusi aplikasi terdepan yang mengakselerasi pertumbuhan bisnis digital.',
+  },
+  {
+    icon: 'users',
+    title: 'Pendekatan',
+    body: 'Mengutamakan kebutuhan pengguna dengan teknologi yang mudah dipahami dan digunakan.',
+  },
+  {
+    icon: 'shield',
+    title: 'Komitmen',
+    body: 'Memberikan layanan berkualitas tinggi dengan keamanan dan dukungan terbaik.',
+  },
+]
+---
+
+<section id="tentang" class="py-20 bg-gradient-to-b from-white to-gray-100/20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Tentang <span class="text-primary">Devghuraba Teknologi</span>
+      </h2>
+      <p class="text-lg text-gray-500 leading-relaxed">
+        Kami adalah perusahaan teknologi yang berdedikasi mengembangkan solusi digital inovatif
+        untuk memberdayakan UMKM dan bisnis di Indonesia. Dengan fokus pada kemudahan penggunaan
+        dan teknologi terdepan, kami hadir untuk menjadi partner transformasi digital Anda.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      {cardInfo.map(value => (
+        <Card icon={value.icon} title={value.title} body={value.body} />
+      ))}
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">Mengapa Memilih Solusi Kami?</h3>
+      <p class="text-gray-500 mb-6">
+        Dengan pengalaman bertahun-tahun dalam industri teknologi, tim Devghuraba Teknologi
+        memahami betul tantangan yang dihadapi oleh bisnis modern. Kami tidak hanya menyediakan
+        aplikasi, tetapi solusi lengkap yang dapat berkembang bersama bisnis Anda.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          Teknologi Terdepan
+        </span>
+        <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          Tim Berpengalaman
+        </span>
+        <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          Support Cepat
+        </span>
+        <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          Harga Kompetitif
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

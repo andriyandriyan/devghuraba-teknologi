@@ -1,0 +1,85 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const message = encodeURIComponent('Halo Devghuraba Teknologi, Saya ingin konsultasi untuk bisnis saya');
+---
+<section class="py-20 bg-gradient-to-r from-primary to-primary-300 relative overflow-hidden">
+  {/* Background Pattern */}
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 w-20 h-20 border border-white rounded-full"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 border border-white rounded-full"></div>
+    <div class="absolute bottom-20 left-1/4 w-12 h-12 border border-white rounded-full"></div>
+    <div class="absolute bottom-40 right-10 w-24 h-24 border border-white rounded-full"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center text-white">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">
+        Siap Transformasi Digital Bisnis Anda?
+      </h2>
+      <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+        Bergabunglah dengan ribuan bisnis yang telah merasakan efisiensi dan pertumbuhan
+        yang luar biasa dengan solusi aplikasi dari Devghuraba Teknologi.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <a
+          href="https://play.google.com/store/apps/developer?id=Ghuraba+Developer"
+          target="_blank"
+          class="flex items-center justify-center gap-2 rounded px-8 h-10.5 bg-white text-primary hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 group"
+        >
+          Coba Gratis Sekarang
+          <Icon name="tabler:arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+
+        <a
+          href={`https://wa.me/6289699250746?text=${message}`}
+          target="_blank"
+          class="flex items-center justify-center gap-2 rounded px-8 h-10.5 bg-white text-primary hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 group"
+        >
+          <Icon name="tabler:message" class="mr-2 h-5 w-5" />
+          Konsultasi Gratis
+        </a>
+      </div>
+
+      {/* Quick Contact Cards */}
+      <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-colors rounded-lg shadow-sm border">
+          <div class="p-6 text-center">
+            <Icon name="tabler:phone" class="h-8 w-8 text-white mx-auto mb-3" />
+            <h3 class="font-semibold text-white mb-2">Telepon</h3>
+            <p class="text-white/80 text-sm">
+              Hubungi tim sales kami untuk konsultasi langsung
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-colors rounded-lg shadow-sm border">
+          <div class="p-6 text-center">
+            <Icon name="tabler:message" class="h-8 w-8 text-white mx-auto mb-3" />
+            <h3 class="font-semibold text-white mb-2">WhatsApp</h3>
+            <p class="text-white/80 text-sm">
+              Chat langsung untuk demo dan tanya jawab
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-colors rounded-lg shadow-sm border">
+          <div class="p-6 text-center">
+            <Icon name="tabler:mail" class="h-8 w-8 text-white mx-auto mb-3" />
+            <h3 class="font-semibold text-white mb-2">Email</h3>
+            <p class="text-white/80 text-sm">
+              Kirim pertanyaan detail untuk solusi kustomisasi
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-white/80 text-sm mb-4">
+          ⭐ Gratis Selamanya • ⚡ Setup dalam 5 menit • 🔒 Data aman terjamin
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

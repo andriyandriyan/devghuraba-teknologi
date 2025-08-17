@@ -1,0 +1,152 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Icon } from 'astro-icon/components';
+import Warsya from '~/images/Warsya.webp';
+import Randori from '~/images/Randori.webp';
+import Reparacion from '~/images/Reparacion.webp';
+import Thoqo from '~/images/Thoqo.webp';
+import Bistro from '~/images/Bistro.webp';
+import RentTap from '~/images/RentTap.webp';
+
+interface Product {
+  name: string;
+  description: string;
+  image: ImageMetadata;
+  featuredFeatures: string[];
+  url: string;
+}
+
+const products: Product[] = [
+  {
+    name: 'Warsya',
+    image: Warsya,
+    description: 'Aplikasi kasir bengkel dengan fitur lengkap untuk mengelola produk, jasa servis, stok, keuangan, hingga penggajian mekanik.',
+    featuredFeatures: [
+      'Manajemen Produk & Jasa',
+      'Multi Cabang Bengkel',
+      'Kartu Stok & Transfer Stok',
+      'Laporan Keuangan Lengkap',
+      'Pengingat Servis Pelanggan'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.warsya.app',
+  },
+  {
+    name: 'Randori',
+    image: Randori,
+    description: 'Aplikasi kasir laundry yang mendukung pencatatan transaksi tanpa batas, tracking order, antar jemput, serta laporan detail keuangan dan operasional.',
+    featuredFeatures: [
+      'Tracking Order & Nota Digital',
+      'Antar/Jemput Transaksi',
+      'Manajemen Mesin Laundry',
+      'Komisi & Penggajian Karyawan',
+      'Laporan Laba Rugi'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.randori.app',
+  },
+  {
+    name: 'Reparación',
+    image: Reparacion,
+    description: 'Aplikasi kasir servis elektronik dengan jenis harga produk, pencatatan pembelian, hingga laporan teknisi dan keuangan terintegrasi.',
+    featuredFeatures: [
+      'Jenis Harga Produk',
+      'Pencatatan Pembelian',
+      'Progress Tracking',
+      'Laporan Komisi Teknisi',
+      'Kartu Stok Produk'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.reparacion.app',
+  },
+  {
+    name: 'Thoqo',
+    image: Thoqo,
+    description: 'Aplikasi kasir toko serbaguna dengan dukungan manajemen produk, barcode scanner, multi cabang, serta laporan penjualan dan keuangan.',
+    featuredFeatures: [
+      'Manajemen Produk',
+      'Barcode Scanner',
+      'Harga Promo & Grosir',
+      'Multi Cabang Toko',
+      'Laporan Penjualan Produk'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.thoqo.app',
+  },
+  {
+    name: 'Bistro',
+    image: Bistro,
+    description: 'Aplikasi kasir kuliner dengan manajemen menu, kitchen display, menu paket, hingga laporan inventori dan keuangan lengkap.',
+    featuredFeatures: [
+      'Manajemen Menu',
+      'Cetak Pesanan ke Dapur',
+      'Menu Paket & Opsi Tambahan',
+      'Inventori Bahan & Menu',
+      'Integrasi Pajak & Laba Rugi'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.bistro.app',
+  },
+  {
+    name: 'RentTap',
+    image: RentTap,
+    description: 'Aplikasi kasir rental dengan fitur multi cabang tanpa batas, katalog online, hingga laporan penyewaan dan keuangan.',
+    featuredFeatures: [
+      'Multi Cabang Bisnis',
+      'Return Reminder',
+      'Katalog Produk Online',
+      'Laporan Penyewaan Produk',
+      'Lapiran Keuangan'
+    ],
+    url: 'https://play.google.com/store/apps/details?id=id.renttap.app',
+  }
+];
+---
+<section id="produk" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Produk <span class="text-primary">Kami</span>
+      </h2>
+      <p class="text-lg text-gray-500">
+        Koleksi lengkap aplikasi kasir dan manajemen bisnis yang dirancang khusus
+        untuk berbagai jenis industri dan kebutuhan bisnis modern.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.map(product => (
+        <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
+          <div class="flex flex-col space-y-1.5 p-6 pt-0">
+            <img src={product.image.src} height="250" width="512" class="group-hover:scale-110 transition-transform duration-300" />
+            <h3 class="font-semibold text-xl group-hover:text-primary transition-colors">
+              {product.name}
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              {product.description}
+            </p>
+          </div>
+          <div class="p-6 pt-0">
+            <div class="space-y-3 mb-6">
+              <h4 class="font-semibold text-sm">Fitur Utama:</h4>
+              <div class="flex flex-wrap gap-2">
+                {product.featuredFeatures.map(feature => (
+                  <div class="text-xs rounded-full px-2.5 py-0.5 font-semibold bg-gray-100">
+                    {feature}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <a href={`${product.url}&utm_source=devghuraba.id`} target="_blank" class="text-sm font-medium text-white rounded py-2 w-full bg-primary flex items-center justify-center gap-2 hover:bg-primary-700">
+              Coba Gratis
+              <Icon name="tabler:external-link" class="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-16">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 rounded-full">
+        <span class="text-primary-700 font-medium">
+          🎉 Semua produk tersedia <b>Gratis Selamanya</b> dengan free trial Pro 14 hari
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

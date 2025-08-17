@@ -1,0 +1,125 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Advantage {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
+const advantages: Advantage[] = [
+  {
+    title: 'Harga Terjangkau',
+    description: 'Paket berlangganan yang fleksibel dengan harga yang ramah untuk UMKM. Mulai dari Rp 50.000/bulan dengan fitur lengkap.',
+    icon: 'currency-dollar',
+    color: 'from-green-500 to-green-600'
+  },
+  {
+    title: 'Support Cepat & Responsif',
+    description: 'Tim customer service siap membantu Anda. Rata-rata response time kurang dari 5 menit via WhatsApp.',
+    icon: 'headset',
+    color: 'from-blue-500 to-blue-600'
+  },
+  {
+    title: 'UI/UX Modern & Intuitif',
+    description: 'Desain yang user-friendly dan mudah dipahami. Tidak perlu training khusus, langsung bisa digunakan oleh siapa saja.',
+    icon: 'palette',
+    color: 'from-purple-500 to-purple-600'
+  },
+  {
+    title: 'Keamanan Terjamin',
+    description: 'Data Anda aman dengan enkripsi end-to-end, backup otomatis, dan compliance dengan standar keamanan internasional.',
+    icon: 'shield',
+    color: 'from-red-500 to-red-600'
+  },
+  {
+    title: 'Scalable & Future-Ready',
+    description: 'Sistem yang dapat berkembang seiring pertumbuhan bisnis Anda. Update fitur reguler tanpa biaya tambahan.',
+    icon: 'trending-up',
+    color: 'from-orange-500 to-orange-600'
+  },
+  {
+    title: 'Performa Cepat',
+    description: 'Cloud infrastructure dengan uptime 99.9%. Akses aplikasi dari mana saja tanpa lag atau downtime.',
+    icon: 'bolt',
+    color: 'from-yellow-500 to-yellow-600'
+  }
+];
+---
+<section id="keunggulan" class="py-20 bg-gradient-to-b from-gray-100/20 to-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Kenapa Memilih <span class="text-primary">Devghuraba Teknologi?</span>
+      </h2>
+      <p class="text-lg text-gray-500">
+        Kami memahami kebutuhan bisnis Indonesia dan berkomitmen memberikan
+        solusi terbaik dengan layanan yang melampaui ekspektasi Anda.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {advantages.map(advantage => (
+        <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-lg">
+          <div class="p-8 text-center">
+            <div class={`w-20 h-20 bg-gradient-to-r ${advantage.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <Icon name={`tabler:${advantage.icon}`} class="h-10 w-10 text-white" />
+            </div>
+            <h3 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+              {advantage.title}
+            </h3>
+            <p class="text-gray-500 leading-relaxed">
+              {advantage.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Comparison Section */}
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-r from-primary/5 to-primary-400/5 border-primary/20 shadow-sm rounded-lg border">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-center mb-8">
+            Bandingkan dengan Kompetitor
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <h4 class="font-bold text-lg mb-4 text-gray-500">Kompetitor Lain</h4>
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li>❌ Setup rumit & lama</li>
+                <li>❌ Harga mahal</li>
+                <li>❌ Support lambat</li>
+                <li>❌ Interface membingungkan</li>
+                <li>❌ Biaya tersembunyi</li>
+              </ul>
+            </div>
+
+            <div class="md:border-x border-gray-300 px-6">
+              <h4 class="font-bold text-lg mb-4 text-primary">Devghuraba Teknologi</h4>
+              <ul class="space-y-2 text-sm text-primary">
+                <li>✅ Setup 5 menit</li>
+                <li>✅ Harga transparan</li>
+                <li>✅ Support cepat</li>
+                <li>✅ Antarmuka yang intuitif</li>
+                <li>✅ Tidak ada biaya tersembunyi</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-lg mb-4 text-gray-500">Solusi Manual</h4>
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li>❌ Rentan terhadap kesalahan</li>
+                <li>❌ Membutuhkan banyak waktu</li>
+                <li>❌ Tidak ada data cadangan</li>
+                <li>❌ Sulit untuk berkembang</li>
+                <li>❌ Tidak ada analitik</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

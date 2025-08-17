@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+	title: string;
+	body: string;
+	icon: string;
+	className?: string;
+}
+
+const { icon, title, body, className = '' } = Astro.props;
+---
+<div class={`rounded-lg shadow-sm text-center p-6 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm ${className}`}>
+	<div class="p-6">
+		<div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-300 rounded-full flex items-center justify-center mx-auto mb-4">
+			<Icon name={`tabler:${icon}`} class="h-8 w-8 text-white" />
+		</div>
+		<h3 class="text-xl font-semibold mb-2">{title}</h3>
+		<p class="text-gray-500 text-sm">
+			{body}
+		</p>
+	</div>
+</div>
