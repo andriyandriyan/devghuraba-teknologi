@@ -113,7 +113,7 @@ const products: Product[] = [
       {products.map(product => (
         <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
           <div class="flex flex-col space-y-1.5 p-6 pt-0">
-            <img src={product.image.src} height="250" width="512" class="group-hover:scale-110 transition-transform duration-300" />
+            <img src={product.image.src} height="250" width="512" class="group-hover:scale-110 transition-transform duration-300" alt={`${product.name} Banner`} />
             <h3 class="font-semibold text-xl group-hover:text-primary transition-colors">
               {product.name}
             </h3>
