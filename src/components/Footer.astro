@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import logo from '~/images/devghuraba-hor-white.webp';
 
 interface Product {
   name: string;
@@ -41,10 +42,7 @@ const message = encodeURIComponent('Halo Devghuraba Teknologi, Saya ingin konsul
       {/* Company Info */}
       <div class="md:col-span-2">
         <div class="flex items-center gap-2 mb-4">
-          <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-sm">D</span>
-          </div>
-          <span class="text-xl font-bold text-white">Devghuraba Teknologi</span>
+          <img src={logo.src} alt="Logo Devghuraba Teknologi" height="36" width="288" />
         </div>
         <p class="text-gray-400 mb-6 leading-relaxed max-w-md">
           Menjadi partner transformasi digital terpercaya untuk UMKM dan bisnis di Indonesia
