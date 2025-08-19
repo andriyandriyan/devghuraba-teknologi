@@ -162,7 +162,25 @@ const clientLogos: ClientLogo[] = [
     category: 'Restoran',
     logo: 'g7n8lmfrcyw079gpudyh8lrz.webp',
   },
-];
+  {
+    app: 'renttap',
+    name: 'Urban Adventure',
+    category: 'Rental Alat Outdoor',
+    logo: 'gfl5jtxgw0r67on0ly1f5pfe.webp',
+  },
+  {
+    app: 'renttap',
+    name: 'MAXPRO',
+    category: 'Rental Proyektor',
+    logo: 'xrsj3nctlmi29b5wewl4ucag.webp',
+  },
+  {
+    app: 'renttap',
+    name: 'Sanz Adventure',
+    category: 'Rental Alat Outdoor',
+    logo: 'ozik21c10alsurjl4e64k5gx.webp',
+  },
+].sort(() => Math.random() - Math.random()) as ClientLogo[];
 
 const firstRows = clientLogos.slice(0, Math.floor(clientLogos.length / 2));
 const secondRows = clientLogos.slice(firstRows.length, clientLogos.length);
@@ -170,7 +188,7 @@ const secondRows = clientLogos.slice(firstRows.length, clientLogos.length);
 {[firstRows, secondRows].map((row, index) => (
   <div class="relative overflow-hidden">
     <div class={`flex ${index === 0 ? 'animate-left-scroll' : 'animate-right-scroll justify-end'} gap-4 md:gap-8 p-4`}>
-      {row.sort(() => Math.random() - Math.random()).map(client => (
+      {row.map(client => (
         <div
           class="flex-shrink-0 flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group min-w-40"
         >
