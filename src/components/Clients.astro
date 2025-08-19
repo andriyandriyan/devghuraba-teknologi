@@ -1,0 +1,218 @@
+---
+type App = 'warsya' | 'randori' | 'reparacion' | 'thoqo' | 'bistro' | 'renttap';
+
+const imageUrl: Record<App, string> = {
+  warsya: 'https://lzwpxlxbujyaxzibgppv.supabase.co/storage/v1/object/public/warsya/logos',
+  randori: 'https://lzwpxlxbujyaxzibgppv.supabase.co/storage/v1/object/public/randori/logos',
+  reparacion: 'https://lzwpxlxbujyaxzibgppv.supabase.co/storage/v1/object/public/reparacion/logos',
+  thoqo: 'https://storage.googleapis.com/devghuraba-tek.appspot.com/thoqo/logos',
+  bistro: 'https://storage.googleapis.com/devghuraba-tek.appspot.com/bistro/logos',
+  renttap: 'https://storage.googleapis.com/devghuraba-tek.appspot.com/renttap/logos',
+}
+
+interface ClientLogo {
+  app: App;
+  name: string;
+  category: string;
+  logo: string;
+}
+
+const clientLogos: ClientLogo[] = [
+  {
+    app: 'warsya',
+    name: 'MURNI MOTOR',
+    category: 'Bengkel',
+    logo: 'cm7pkwbog000171uf91493bnq.webp',
+  },
+  {
+    app: 'warsya',
+    name: 'BARAYA MOTOR',
+    category: 'Bengkel',
+    logo: 'clyd74eq6002l9tufd2br2ayf.webp',
+  },
+  {
+    app: 'warsya',
+    name: 'Tom\'s Motoshop Nologaten',
+    category: 'Bengkel',
+    logo: 'cm2znw5br003jjaufevihfhos.webp',
+  },
+  {
+    app: 'warsya',
+    name: 'PUTRI MOTOR SPEED SHOP',
+    category: 'Bengkel',
+    logo: 'cm5zbvcro00s1rzuf9mgo46dn.webp',
+  },
+  {
+    app: 'warsya',
+    name: 'Bengkel dan spare Part ASM Motor',
+    category: 'Bengkel',
+    logo: 'clz5a81xt001kp6ufcg2n0y6x.webp',
+  },
+  {
+    app: 'randori',
+    name: 'LAUNDRY PERMATA',
+    category: 'Laundry',
+    logo: 'cmarwom360081bpuf2y4jf7fs.webp',
+  },
+  {
+    app: 'randori',
+    name: 'Londra Londri',
+    category: 'Laundry',
+    logo: 'cmb8wxt5v003r0yuf2ecfdcds.webp',
+  },
+  {
+    app: 'randori',
+    name: 'cuci24laundry',
+    category: 'Laundry',
+    logo: 'cmdrlsatw000rgzufedvd055i.webp',
+  },
+  {
+    app: 'randori',
+    name: 'Laundry HeRo',
+    category: 'Laundry',
+    logo: 'cmbn96vod0017smufeo315s1k.webp',
+  },
+  {
+    app: 'randori',
+    name: 'LEON Laundry 01',
+    category: 'Laundry',
+    logo: 'cm8qt51b6008dj7uf00sn95vx.webp',
+  },
+  {
+    app: 'reparacion',
+    name: 'WAWAN PONSEL',
+    category: 'Servis Handphone',
+    logo: 'clzi4hlhl00bf7juffdtv40pq.webp',
+  },
+  {
+    app: 'reparacion',
+    name: 'Purnama Permai Teknik',
+    category: 'Servis Elektronik',
+    logo: 'cm3h7r0bm00apdxuf5mvqh80g.webp',
+  },
+  {
+    app: 'reparacion',
+    name: 'Bima Service',
+    category: 'Servis Elektronik',
+    logo: 'clzfqr3yi007d7jufb7m959wb.webp',
+  },
+  {
+    app: 'reparacion',
+    name: 'd\'Froze service',
+    category: 'Servis Elektronik',
+    logo: 'cm5zi702400jl8nufcku0475o.webp',
+  },
+  {
+    app: 'reparacion',
+    name: 'AJI PONSEL',
+    category: 'Servis Android & iPhone',
+    logo: 'cm57p6yfm00swkwufamxjazo9.webp',
+  },
+  {
+    app: 'thoqo',
+    name: 'JAGAL AYAM',
+    category: 'Usaha Ayam Potong',
+    logo: 'edpjfa4p8zt68kskn3qgi9mx.webp',
+  },
+  {
+    app: 'thoqo',
+    name: 'MD STORE 2 ~ FROZEN FOOD & SNACK',
+    category: 'Usaha Frozen Food',
+    logo: 'xljc34uw0d9x36xrjecm5cc4.webp',
+  },
+  {
+    app: 'thoqo',
+    name: 'Spot Jajan KCY',
+    category: 'Usaha F&B',
+    logo: 'pbkwocy6oyc33p4e4huzixs2.webp',
+  },
+  {
+    app: 'thoqo',
+    name: 'Frozone',
+    category: 'Usaha Frozen Food',
+    logo: 'xmug71ytztb9yh3le7928m0f.webp',
+  },
+  {
+    app: 'thoqo',
+    name: 'SAM Creative Printing',
+    category: 'Usaha Percetakan',
+    logo: 'oz8eevhqpkl6h5nzydzf1wmk.webp',
+  },
+  {
+    app: 'bistro',
+    name: 'Seafood Cigadung 67',
+    category: 'Restoran',
+    logo: 'c2hp1opirx4x226t5tm0nuh0.webp',
+  },
+  {
+    app: 'bistro',
+    name: 'WD Coffee And Eatery',
+    category: 'Restoran',
+    logo: 'zlltom5pmg8ui39cx2ujzmxq.webp',
+  },
+  {
+    app: 'bistro',
+    name: 'Bakso Telkom Putra Utomo',
+    category: 'Usaha Kuliner',
+    logo: 'mt9fr1tyl9z9kfj6ajavblhm.webp',
+  },
+  {
+    app: 'bistro',
+    name: 'The Reef',
+    category: 'Restoran',
+    logo: 'g7n8lmfrcyw079gpudyh8lrz.webp',
+  },
+];
+
+const firstRows = clientLogos.slice(0, Math.floor(clientLogos.length / 2));
+const secondRows = clientLogos.slice(firstRows.length, clientLogos.length);
+---
+{[firstRows, secondRows].map((row, index) => (
+  <div class="relative overflow-hidden">
+    <div class={`flex ${index === 0 ? 'animate-left-scroll' : 'animate-right-scroll justify-end'} gap-4 md:gap-8 p-4`}>
+      {row.sort(() => Math.random() - Math.random()).map(client => (
+        <div
+          class="flex-shrink-0 flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group min-w-40"
+        >
+          <div class="mb-2 group-hover:scale-110 transition-transform duration-300 overflow-hidden rounded-lg">
+            <img src={`${imageUrl[client.app]}/${client.logo}`} height="64" width="64" alt={`${client.name} - ${client.category}`} />
+          </div>
+          <h4 class="font-semibold text-sm text-center text-foreground mb-1">
+            {client.name}
+          </h4>
+          <span class="text-xs text-muted-foreground px-2 py-1 bg-primary/10 rounded-full">
+            {client.category}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+))}
+
+<style>
+  .animate-left-scroll {
+    animation: left-scroll 30s linear infinite;
+  }
+
+  @keyframes left-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-right-scroll {
+    animation: right-scroll 30s linear infinite;
+  }
+
+  @keyframes right-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+</style>

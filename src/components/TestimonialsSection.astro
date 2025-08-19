@@ -1,4 +1,6 @@
 ---
+import Clients from "./Clients.astro";
+
 interface Testimonial {
   name: string;
   role: string;
@@ -163,30 +165,37 @@ const testimonials: Testimonial[] = [
       ))}
     </div>
 
+    <div class="text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold mb-6">
+        Dipercaya oleh <span class="text-primary">Ribuan Bisnis</span>
+      </h3>
+
+      <p class="text-gray-500">
+        Dari UMKM hingga enterprise, ribuan bisnis telah berkembang bersama solusi kami
+      </p>
+    </div>
+
+    <Clients />
+
     {/* Trust Indicators */}
     <div class="max-w-4xl mx-auto">
-      <div class="bg-gradient-to-r from-primary/5 to-primary-400/5 border-primary/20 shadow-sm rounded-lg border">
-        <div class="p-8 text-center">
-          <h3 class="text-2xl font-bold mb-6">
-            Dipercaya oleh Ribuan Bisnis
-          </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <div class="text-3xl font-bold text-primary mb-2">4.7/5</div>
-              <div class="text-sm text-gray-500">Rating Kepuasan</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold text-primary mb-2">1000+</div>
-              <div class="text-sm text-gray-500">Pengguna Aktif</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold text-primary mb-2">450+</div>
-              <div class="text-sm text-gray-500">Kota Terlayani</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold text-primary mb-2">2+</div>
-              <div class="text-sm text-gray-500">Tahun Pengalaman</div>
-            </div>
+      <div class="p-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">4.7/5</div>
+            <div class="text-sm text-gray-500">Rating Kepuasan</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">1000+</div>
+            <div class="text-sm text-gray-500">Bisnis Aktif</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">450+</div>
+            <div class="text-sm text-gray-500">Kota Terlayani</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">2+</div>
+            <div class="text-sm text-gray-500">Tahun Pengalaman</div>
           </div>
         </div>
       </div>
